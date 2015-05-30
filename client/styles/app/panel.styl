@@ -1,0 +1,64 @@
+//
+// Panels
+// --------------------------------------------------
+
+clearfix()
+    &:before,
+    &:after
+        content " " // 1
+        display table // 2
+
+    &:after
+        clear both
+
+$font-size-base = 16px
+$panel-body-padding = $panel-heading-padding = 10px
+
+// Base class
+.panel
+    margin-bottom $line-height-computed
+    background-color $panel-bg
+    border-radius 5px
+    box-shadow 0 1px 1px rgba(0, 0, 0, .05)
+
+// Panel contents
+.panel-body
+    padding $panel-body-padding
+    border-radius 0 0 5px 5px
+    border 1px solid #ddd
+    border-top none
+    clearfix()
+
+// Optional heading
+.panel-heading
+    padding $panel-heading-padding
+    border 1px solid #ddd
+    border-radius 5px 5px 0 0
+    background-color #f5f5f5
+
+    > .dropdown .dropdown-toggle
+        color inherit
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title
+    margin-top 0
+    margin-bottom 0
+    font-size ceil(($font-size-base * 1.125))
+    color inherit
+
+    > a
+        color inherit
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer
+    padding $panel-footer-padding
+    background-color $panel-footer-bg
+    border 0 0 5px 5px
+
+.container-login
+    max-width 1200px
+    margin auto
+
+.login
+    width 30%
+    margin 200px auto 0

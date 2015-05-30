@@ -1,0 +1,56 @@
+body
+    background WHITE
+    font-family FONT
+    font-size MEDIUM
+
+.text-center
+    text-align center
+
+.text-right
+  text-align right
+
+a
+  color #3ad5b1
+
+nav
+    background PRIMARY
+    margin-bottom 90px
+    position relative
+    clearfix()
+
+    .logo
+      width 26px
+      height 26px
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      margin auto
+      img
+        max-width 100%
+
+    ul
+        margin 0
+        padding 0
+        list-style none
+        li
+            float left
+        a
+            display block
+            line-height 46px
+            padding 0 GRID_GAP
+            font-size MEDIUM
+            color WHITE
+            text-decoration none
+            font-weight bold
+            &:hover, &.active
+                background darken(PRIMARY, 15%)
+        &.nav
+            float left
+            li
+                border-right 1px solid darken(PRIMARY, 15%)
+        &.account
+            float right
+            li
+                border-left 1px solid darken(PRIMARY, 15%)

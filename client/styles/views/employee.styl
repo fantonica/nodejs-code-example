@@ -1,0 +1,590 @@
+.fixed-top
+    position fixed
+    top 0
+    width 100%
+    background WHITE
+    z-index 5
+    transition box-shadow 0.3s ease
+    &.fixed
+        box-shadow 0 1px 6px #ccc
+
+.employee
+    padding-top 110px
+    margin 0 -15px
+
+    .row
+      margin 0
+    
+.week-navigation, .day-navigation
+    text-align center
+
+    .select-week
+      display inline-block
+    span
+      position relative
+    h2
+        font-size BIGGEST
+        font-weight 300
+        display block
+        margin-top 0
+        margin-bottom 0
+
+        select
+          font-size 13px
+          color rgba(0, 0, 0, 0)
+          font-weight 300
+          border none
+          background none
+          position: absolute
+          left 0
+          width 200px
+          height 50px
+          outline none
+          -webkit-appearance none
+          -moz-appearance none
+          appearance none
+          padding: 0 30px 0 0;
+
+          option
+            font-size 13px
+            color #fff
+    .arrow, .today
+        background WHITE
+        font-size BIG
+        display inline-block
+        font-weight 600
+        border 1px solid LIGHTGRAY
+        width 33px
+        height 33px
+        line-height 33px
+        vertical-align middle
+        border-radius 20px
+        margin 0 10px
+        color DARKGRAY
+        text-decoration none
+        &:hover
+            background DARKGRAY
+            border-color DARKGRAY
+            color WHITE
+    .today
+        width auto
+        padding 0 GRID_GAP
+        font-weight 300
+        margin-left -80px
+        &.hidden
+            opacity 0
+            cursor default
+    
+.week-heading, .day-heading
+    text-align center
+    font-size BIG
+    .active
+        font-weight 900
+
+
+.week-heading
+    padding-bottom 0 !important
+    .weekend-left, .weekend-right
+        padding-top GRID_GAP
+        padding-bottom GRID_GAP
+        margin-top (-1 * GRID_GAP)
+    .weekend-left
+        background GRAY
+        border-top-left-radius 5px
+    .weekend-right
+        background GRAY
+        border-top-right-radius 5px
+
+.week-heading,
+.week-listing
+    .week-column
+        width 90%
+    .name-column
+        width 10%
+        padding-left (GRID_GAP / 2)
+        text-align left
+        position relative
+      .name
+        cursor pointer
+    .name-column,
+    .week-column
+        -webkit-box-sizing border-box
+        -moz-box-sizing border-box
+        box-sizing border-box
+        float left
+
+        .form-control
+            font-weight 400
+            margin -10px 0 0 0
+
+
+
+.clear-form
+  position absolute
+  top -2px
+  right 10px
+  font-size 25px
+  line-height 25px
+  display block
+  cursor pointer
+  opacity .4
+  transform rotate(90deg)
+  transition(all 300ms)
+
+
+  &:hover
+    opacity 1
+    transform rotate(0deg)
+
+.week-listing
+    margin 0
+    padding 0 0 GRID_GAP
+    list-style none
+    position relative
+
+    &:before
+      background: GRAY;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: (90% / 16 * 2);
+      width: (90% / 16 * 4);
+      content: "";
+
+    .row
+        padding 0 !important
+    li
+        line-height 40px
+        text-align center
+        position relative
+        clearfix();
+        &:before
+            position absolute
+            top 20px + (GRID_GAP / 3)
+            left 3%
+            height 1px
+            width 96%
+            background LIGHTGRAY
+            content ""
+        &.head
+            text-align left
+    .name, .hours
+        background WHITE
+        font-size BIG
+        display block
+        font-weight 600
+        border 1px solid LIGHTGRAY
+        width 38px
+        height 38px
+        line-height 38px
+        vertical-align middle
+        margin (GRID_GAP / 3) 0 (GRID_GAP / 3)
+        border-radius GRID_GAP
+        position relative
+        z-index 2
+    .hours
+        font-style italic
+        cursor pointer
+        float right
+    .name
+        width auto
+        height auto
+        display inline-block
+        padding 0 10px
+    .info
+        position absolute
+        z-index 3
+        top (GRID_GAP / 3)
+        right (GRID_GAP / 2)
+        width 430px
+        background alpha(WHITE, 0.9)
+        border 1px solid LIGHTGRAY
+        border-radius GRID_GAP
+        font-size SMALL
+        color BLACK
+        display none
+        text-align left
+        &.open
+            display block
+        .close
+            font-weight bold
+            font-size BIG
+            position absolute
+            top (GRID_GAP / 2)
+            right (GRID_GAP)
+            line-height GRID_GAP
+            cursor pointer
+        h4
+            margin (GRID_GAP / 2) 0 GRID_GAP
+            font-weight 400
+            font-size BIG
+            text-align center
+        .data
+            line-height MEDIUM
+        strong
+            font-size (BIG)
+            font-weight 700
+            display block
+        .normperiod
+            font-size BIG + 4
+            margin-bottom (GRID_GAP / 2)
+            text-align center
+            strong
+                display inline
+
+#patient-daylisting
+  text-align center
+
+.day-listing
+    margin 0
+    padding 0
+    list-style none
+    display inline-block
+    ul
+        list-style none
+        padding 0
+    clearfix()
+    .row
+        padding 0 !important
+    li.head
+        @extend .week-listing li
+        display block
+        padding-bottom 0 !important
+    li
+        img
+            display block
+            background #979797
+            height 83%
+            margin 0 auto
+            border-radius 10px 10px 0 0
+            -webkit-box-sizing: border-box
+            -moz-box-sizing: border-box
+            box-sizing: border-box
+        .name
+            text-align center
+            display block
+            font-weight normal
+            font-size 11px
+            padding-bottom 0
+            margin-top -8px
+            text-overflow ellipsis
+            overflow hidden
+
+            .skill
+              font-size 11px
+              display block
+              line-height 1
+
+            &.name-small
+                font-size (BIG / 2)
+                line-height 1
+
+                .skill
+                  font-size (BIG / 2)
+        .groupname
+            color BLACK
+            text-align center
+            font-weight bold
+            font-size 16px
+            height 40px
+            line-height 40px
+            white-space nowrap
+
+        
+            a
+                color #000000
+                text-decoration none
+                display block
+
+
+        .inner
+          position relative
+          border-radius 10px
+          overflow hidden
+        .shift
+            line-height 22px
+            border-radius 0 0 10px 10px
+            padding 0 4px 4px
+            margin auto
+            box-sizing border-box
+            -moz-box-sizing border-box
+            -webkit-box-sizing border-box
+        &.no-photo
+          display table
+          .shift
+            position: absolute
+            top 0
+            left 0
+            right 0
+            bottom 0
+            margin auto
+            max-width 130px
+            width 100% !important
+            height 50px
+
+#patient-weekheading
+    .groupname
+      font-weight 400
+
+      &.first
+        font-weight 700
+
+
+    .day-listing
+        text-align center
+        > ul
+            margin 0
+            padding 0
+            display inline-block
+        .daycolumns
+            padding-left 10px
+            margin-bottom 0
+            .groupname
+              position absolute
+              top 0
+              bottom 0
+              margin auto
+              height 40px
+              line-height 40px
+              min-width 115px
+            .daycolumn
+              margin-left 115px
+            @media only screen and (orientation portrait)
+              display table-cell
+              width 1%
+              padding 0
+              vertical-align top
+              box-sizing border-box
+              -moz-box-sizing border-box
+              -webkit-box-sizing border-box
+
+              .daycolumn
+                margin-left 0
+
+              &:before
+                height auto
+                width 1px
+                bottom 20px
+
+              .groupname
+                float: none
+                width 100% !important
+                height auto !important
+                line-height 1 !important
+                position relative
+                margin-bottom 20px
+
+                > span
+                  position absolute
+                  top 0
+                  right 0
+                  bottom 0
+                  left 0
+                  text-align center
+                  display block
+                  height 30px
+                  line-height 30px
+                  margin auto
+
+              .daycolumn
+                float: none
+                width 100% !important
+
+            li
+              float: none
+              display table-cell
+              padding 0 5px
+              vertical-align top
+
+              @media only screen and (orientation portrait)
+                display: block
+                height auto !important
+                margin-bottom 15px
+                padding 0
+
+                .shift
+                  max-width 115px !important
+
+        li
+            img
+                max-width 100%
+            .shift
+                margin-top 0
+                position absolute
+                bottom 0
+                left 0
+                right 0
+            .name
+                font-size 14px
+                margin-top 0
+                line-height 1.1
+                margin-bottom 4px
+              .skill
+                display block
+
+
+
+
+.dayhead
+    clearfix()
+    text-align center
+    font-size BIG
+    padding-bottom 10px
+
+    & > div
+        overflow hidden
+        padding-bottom 10px
+
+        &.day, &.week
+            font-weight 700
+            white-space nowrap
+            overflow visible
+.weekhead
+  > .week
+    font-weight 300
+    font-size 34px
+    padding-bottom 20px
+
+.daycolumns
+    margin-bottom 10px
+    position relative
+
+    .daycolumn
+        li
+            position relative
+
+            .overlay
+                border-radius 10px 10px 0 0
+                position relative
+                width 100%
+                margin auto
+                max-width 115px
+                img
+                    max-width 100%
+                    height auto
+                &.in
+                    &:after
+                        content ""
+                        position absolute
+                        top 0
+                        right 0
+                        bottom 0
+                        left 0
+                        background rgba(#000, .3)
+
+            // max-width 160px
+            &.hide, .hide
+                visibility hidden
+            &.fade-gray
+                filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+                filter: gray; /* IE6-9 */
+                -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+
+            .shift
+              &:after
+                right 0
+              &:before
+                left 0
+
+.group
+    @extend .week-listing .name
+    background GRAY
+    font-weight bold
+    width auto
+    display inline-block
+    padding 0 (GRID_GAP)
+        
+.shift
+    background DARKGRAY
+    color WHITE
+    border-radius GRID_GAP
+    margin (GRID_GAP / 3) (GRID_GAP / 2)
+    vertical-align middle
+    position relative
+    font-size 14px
+    z-index 2
+    line-height 40px
+    text-align center
+    white-space nowrap
+
+    &.shift-small
+        line-height 20px
+        font-size (BIG / 2)
+
+    &.shift-middle
+      line-height 1
+      font-size 14px
+
+      > span
+        display inline-block
+        margin-top -10px
+        margin-bottom -10px
+        line-height 1
+      > strong
+        margin-top -8px !important
+
+
+    & + .shift
+        margin-top (GRID_GAP / 1.5)
+        &:before
+            background GRAY
+            content ""
+            height 13px
+            left 0
+            position absolute
+            top -12px
+            left 0
+            right 0
+            margin auto
+            width 1px
+    &.shift-yellow
+        color BLACK
+        font-weight 600
+        background #f4f600
+    &.shift-purple
+        font-weight 600
+        background #a900ff
+    &.shift-red
+        font-weight 600
+        background #e00000
+    &.shift-stripe
+        color BLACK
+        font-weight 600
+        background: repeating-linear-gradient(
+            45deg,
+            #ffb400,
+            #ffb400 20px,
+            #fca600 23px,
+            #fca600 24px,
+            #ffb400 27px
+        );
+    &.shift-day
+        background #5186e9
+    &.shift-evening
+        background #00864a
+    &.shift-night
+        background #bd0046
+    &.shift-overtime
+        background #9013FE
+    &.shift-absent
+        background #ffcc00
+        color BLACK
+        font-weight 600
+        line-height 16px
+        padding 4px 0
+        &.range
+            font-size MEDIUM
+            margin-top -10px
+        .absence-text
+            font-size SMALL
+            font-weight normal
+
+#employee-weeklisting .shift
+  font-size 16px
+.loading
+    font-size BIGGEST
+    color BLACK
+    font-weight 300
+    text-align center
+    padding 100px 0
+    opacity 0.5

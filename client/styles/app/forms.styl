@@ -1,0 +1,70 @@
+.form-group
+    position relative
+    label
+        font-weight 700
+        display inline-block
+        margin-bottom 5px
+
+    &.inline
+      display table
+      width 100%
+      .form-item
+        display table-cell
+        width 100%
+        padding 0 5px
+
+.form-control
+    display block
+    width 100%
+    height 40px
+    padding 6px 12px
+    font-size 14px
+    line-height 40px
+    color #555
+    font-weight 700
+    background-color #fff
+    background-image none
+    border 1px solid #969696
+    border-radius 50px
+    box-sizing border-box
+    -moz-box-sizing border-box
+    -webkit-box-sizing border-box
+    margin-bottom 10px
+    outline none
+
+    &:-webkit-autofill
+      background white !important
+      color #fff !important
+
+    &:focus
+        border-color #3ad5b1
+
+    &.error
+        border-color red
+        color red
+
+.checkbox-box
+    cursor pointer
+
+    input[type="checkbox"]
+        cursor pointer
+
+    label
+        margin-left 10px
+        cursor pointer
+
+.select-box
+  border 1px solid #969696
+  border-radius 50px
+  margin-bottom 10px
+  background #fff
+  .form-control
+    border none
+    border-radius 0
+    margin-bottom 0
+    background none
+
+input:-webkit-autofill
+  background white !important
+  color #fff !important
+  box-shadow 0 0 0 40px #fff inset

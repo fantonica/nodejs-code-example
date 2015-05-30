@@ -1,0 +1,19 @@
+<% layout('../layout/main') -%>
+
+<% block('title', "Dashboard User List") -%>
+
+<% script('/js/bundle/users.js') -%>
+
+<div class="container container-fixed">
+    <div class="dashboard">
+        <div class="row heading">
+            <div class="col6">
+                <h2>Users</h2>
+            </div>
+            <div class="col6 buttons">
+                <a href="/admin/create" class="button">Add New</a>
+            </div>
+        </div>
+        <div id="dashboard-users"></div>
+    </div>
+</div>

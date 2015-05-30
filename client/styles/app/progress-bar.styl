@@ -1,0 +1,23 @@
+.progress-bar
+  position: relative
+  height 25px
+  border-radius 50px
+  background #ddd
+  margin-top 15px
+
+  &.out
+    visibility hidden
+
+  .bar
+    background #3ad5b1
+    border-radius 50px
+    position absolute
+    top 0
+    left 0
+    height 25px
+    text-align center
+    transition(all 200ms)
+
+    span
+      font-size 18px
+      color #fff

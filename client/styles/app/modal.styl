@@ -1,0 +1,91 @@
+.modal
+    background rgba(#000, .5);
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+    z-index 100
+    visibility hidden
+    opacity 0
+    transition(all .4s)
+
+    &.cat-image
+      &.in
+        .modal-content
+          top 10%
+
+    &.in
+        visibility visible
+        opacity 1
+
+    .modal-dialog
+        overflow-y auto
+        position fixed
+        top 0
+        left 0
+        height 100%
+        width 100%
+
+        .modal-content
+            background #fff
+            border-radius 20px
+            width 100%
+            max-width 700px
+            margin auto
+            position relative
+            top 20%
+            opacity 0
+            transform scale(0, 0)
+            transition(all .4s cubic-bezier(0,1.61,.47,.82))
+
+            .modal-header, .modal-body, .modal-footer
+                padding 10px 20px
+
+            .close
+                outline none
+                position absolute
+                top 0
+                right 0
+                color #fff
+                border-radius 50%
+                border none
+                box-shadow 0 0 0 1px #fff inset
+                background transparent
+                width 40px
+                height 40px
+                line-height 40px
+                text-align center
+                margin -40px -40px 0 0
+                font-size 24px
+                padding 0
+                transition(all 400ms)
+
+                &:hover
+                    rotated(90deg)
+                    color #000
+                    box-shadow 0 0 0 30px #fff inset
+
+    &.small
+      .modal-content
+        max-width 350px
+
+    &.in
+        .modal-content
+            transform scale(1, 1)
+            opacity 1
+
+.modal-inner
+    &.modal-enter
+        opacity 0
+        transition opacity 1s ease-in
+
+    &.modal-enter.modal-enter-active
+        opacity 1
+
+    &.modal-leave
+        opacity 1
+        transition opacity 1s ease-in
+
+    &.modal-leave.modal-leave-active
+        opacity 0

@@ -1,0 +1,163 @@
+.wizard
+
+  h2
+    text-align center
+
+  .show
+    display block
+
+  .hide
+    display none
+
+  .units-list
+
+    h4
+      display none
+
+      .btn, .button
+        margin-top -10px
+
+    .checkbox-box
+      width 100%
+      float none
+
+.units-list
+
+  h4
+    .btn, .button
+      margin-top -10px
+
+.example
+  color #aaa
+  margin-bottom 15px
+  > div
+    display table-cell
+    width 1%
+    text-align center
+
+.checkbox-box
+  width 100%
+  float none
+  border 1px solid #9D9D9D
+  margin-bottom 10px
+  border-radius 50px
+  box-sizing border-box
+
+  label
+    display block
+    padding 10px 10px 10px 30px
+    position relative
+
+    &:after
+      content "\f00c"
+      font-family 'FontAwesome'
+      font-size 13px
+      line-height 20px
+      color #fff
+      width 20px
+      height 20px
+      display block
+      position absolute
+      left 0px
+      top 0
+      bottom 0
+      margin auto
+      text-align center
+      transform scale(0, 0)
+      transition(all 400ms)
+
+    &:before
+      content: ""
+      border-radius 50%
+      box-shadow 0 0 0 1px #9D9D9D inset
+      width  20px
+      height 20px
+      display block
+      position absolute
+      left 0px
+      top 0
+      bottom 0
+      margin auto
+      transition(all 400ms);
+
+  input[type="checkbox"]
+    visibility hidden
+    display none
+
+    &:checked
+      ~ label
+        font-weight 700
+
+        &:after
+          transform scale(1, 1)
+
+        &:before
+          box-shadow 0 0 0 40px #7ED321 inset
+
+.radio-box
+  margin-bottom 10px
+  clearfix();
+  .item
+    width 50%
+    float left
+    box-sizing border-box
+    -moz-box-sizing border-box
+    -webkit-box-sizing border-box
+    padding 0 5px
+
+  label
+    display block
+    vertical-align middle
+    border 1px solid #9D9D9D
+    border-radius 50px
+    padding 10px 40px 10px
+    position relative
+    cursor pointer
+    text-align center
+
+    &:after
+      content "\f00c"
+      font-family 'FontAwesome'
+      font-size 13px
+      line-height 20px
+      color #fff
+      width 20px
+      height 20px
+      display block
+      position absolute
+      left 10px
+      top 0
+      bottom 0
+      margin auto
+      text-align center
+      transform scale(0, 0)
+      transition(all 400ms)
+
+    &:before
+      content: ""
+      border-radius 50%
+      box-shadow 0 0 0 0 #9D9D9D inset
+      width  20px
+      height 20px
+      display block
+      position absolute
+      left 10px
+      top 0
+      bottom 0
+      margin auto
+      transition(all 400ms);
+
+  input[type="radio"]
+    display none
+
+    &:checked
+      ~ label
+        font-weight 700
+
+        &:after
+          transform scale(1, 1)
+
+        &:before
+          box-shadow 0 0 0 40px #7ED321 inset
+
+

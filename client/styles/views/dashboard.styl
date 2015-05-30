@@ -1,0 +1,74 @@
+.heading
+    margin-bottom 20px
+    h2
+        font-size BIGGER
+        font-weight 300
+        margin 0
+    .buttons
+        text-align right
+
+.views-listing
+    padding 0
+    margin 0
+    list-style none
+    li
+        background WHITE
+        color DARKGRAY
+        border 1px solid LIGHTGRAY
+        border-radius GRID_GAP
+        line-height 20px
+        margin GRID_GAP 0 !important
+        &:nth-of-type(even)
+            background LIGHT
+        span
+          color DARKGRAY
+        strong
+            color BLACK
+            padding 0 GRID_GAP 0 (GRID_GAP / 2)
+            font-size BIG
+        .actions
+            font-weight 600
+            a
+                link()
+                text-align center
+                color DARKGRAY
+            a:first-child
+                text-align right
+            a:last-child
+                text-align left
+        &:hover
+            background DARKGRAY
+            border-color DARKGRAY
+            color LIGHTGRAY
+            strong, .actions a
+                color WHITE
+                font-weight 900
+            span
+              color WHITE
+
+.dashboard
+    padding-bottom 30px
+
+.user-info
+    > div
+        margin-bottom 15px
+
+.add-new-user
+    width 40%
+    margin auto
+
+.units-list
+    clearfix()
+    padding 10px 0
+
+    h4
+        margin-top 0
+
+    .checkbox-box
+        width 49%
+        float left
+        margin-right 0.5%
+        margin-left 0.5%
+
+#global-zeroclipboard-flash-bridge
+  cursor pointer

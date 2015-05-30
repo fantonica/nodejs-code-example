@@ -1,0 +1,61 @@
+.collapse-group
+  .collapse-panel
+    border 1px solid #9D9D9D
+    border-radius 20px
+    padding 0 15px
+    margin-bottom 10px
+
+    .panel-header
+      padding 10px 0
+      position relative
+
+      a
+        display inline-block
+
+        &:after
+          content "\f044"
+          font-family 'FontAwesome'
+          font-size 16px
+          color #aaa
+          margin-left 10px
+
+      h4.panel-title
+        border-bottom 1px solid #9D9D9D
+        font-weight 700
+
+      .arrow
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        line-height 14px
+        height 14px
+        margin auto
+        display block
+        transition(all 400ms);
+        transform rotate(180deg)
+
+      &.collapsed
+        padding 10px 0 !important
+
+        h4.panel-title
+          border-bottom none
+          font-weight 400
+
+        .arrow
+          transform rotate(0deg)
+      a
+        text-decoration none
+
+    .panel-collapse
+      max-height 0
+      overflow hidden
+      transition(all 400ms);
+
+      .panel-body
+        border none
+        padding 0
+
+      &.in
+        max-height 600px
+        overflow-y auto

@@ -1,0 +1,38 @@
+.container
+    display block
+    width 100%
+    &.container-fixed
+        margin 0 auto
+        width GRID_WIDTH
+
+    .row
+        clearfix()
+        padding (GRID_GAP / 2) 0
+        &.container-fixed
+            margin 0 (GRID_GAP / -2)
+        
+    .col
+        padding 0 (GRID_GAP / 2)
+        float left
+        box-sizing border-box
+
+        &.center
+            float none
+            margin auto
+    
+    .collapsed
+        padding 0 !important
+    .collapsed-left
+        padding-left 0 !important
+    .collapsed-right
+        padding-right 0 !important
+    
+for c, i in GRID_COLUMNS
+    postfix = (i == 0) ? ('') : ('-' + c)
+    .container{postfix}
+        for n in (1..c)
+            .col{n}
+                @extend .container .col
+                width (100% / c) * n
+            .offset{n}
+                margin-left (100% / c) * n
